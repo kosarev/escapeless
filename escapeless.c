@@ -16,7 +16,7 @@ void escapeless_encode(unsigned char *takeouts_map,
         map[ block[i] ] = block[i];
 
     k = 0;
-    for(i = 0; i != block_size && k < takeouts_size; ++i) {
+    for(i = 0; i != 0x100 && k < takeouts_size; ++i) {
         if(map[i] != i) {
             map[ takeouts[k] ] = (unsigned char) i;
             takeouts_map[k++] = (unsigned char) i;
