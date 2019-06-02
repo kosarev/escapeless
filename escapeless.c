@@ -8,7 +8,7 @@
 #include "libescapeless.h"
 
 static void verror(const char *format, va_list args) {
-    fprintf(stderr, "error: ");
+    fprintf(stderr, "escapeless: ");
     vfprintf(stderr, format, args);
     fprintf(stderr, "\n");
     exit(EXIT_FAILURE);
@@ -111,7 +111,7 @@ static void decode(const unsigned char *takeouts, unsigned takeouts_size) {
 }
 
 static void usage(void) {
-    fprintf(stderr, "usage: tester {encode|decode} <takeouts>\n");
+    fprintf(stderr, "usage: escapeless {encode|decode} <takeouts>\n");
     exit(EXIT_FAILURE);
 }
 
