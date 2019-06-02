@@ -3,11 +3,11 @@ Efficient binary encoding for large alphabets.
 
 ### Features
 
-* Low fixed overhead.
-* Compression-friendly.
+* Low fixed-size overhead.
+* Compression-friendly output.
 * Arbitrary alphabets.
 * Fast and simple algorithm.
-* Does not rely on long arithmetic.
+* Does not involve multiplications and divisions.
 
 
 ### Comparison chart
