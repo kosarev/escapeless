@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "escapeless.h"
+#include "libescapeless.h"
 
 static void verror(const char *format, va_list args) {
     fprintf(stderr, "error: ");

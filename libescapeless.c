@@ -1,7 +1,7 @@
 
 #include <assert.h>
 
-#include "escapeless.h"
+#include "libescapeless.h"
 
 void escapeless_encode(unsigned char *takeouts_map,
                        const unsigned char *takeouts, unsigned takeouts_size,
