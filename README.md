@@ -7,7 +7,7 @@ Efficient binary encoding for large alphabets.
 * Compression-friendly output.
 * Arbitrary alphabets.
 * Fast and simple algorithm.
-* Does not involve multiplications and divisions.
+* Does not involve heavy-weight arithmetic.
 
 
 ### Comparison chart
