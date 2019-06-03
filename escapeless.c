@@ -41,7 +41,7 @@ static void encode(const unsigned char *takeouts, unsigned takeouts_size) {
 
     /* TODO: Validate takeouts size. */
 
-    max_block_size = 0x100 - takeouts_size;
+    max_block_size = 0x100 - 1 - takeouts_size;
 
     for(;;) {
         /* Read subsequent block of data. */
@@ -74,7 +74,7 @@ static void decode(const unsigned char *takeouts, unsigned takeouts_size) {
 
     /* TODO: Validate takeouts size. */
 
-    max_block_size = 0x100 - takeouts_size;
+    max_block_size = 0x100 - 1 - takeouts_size;
 
     for(;;) {
         /* Read the substitutes for the takeout bytes. */
@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
 
     takeouts = argv[2];
     takeouts_size = strlen(takeouts);
-    if(takeouts_size >= 0x100)
+    if(takeouts_size >= 0x100 - 1)
         error("too many takeout bytes");
 
     command = argv[1];
