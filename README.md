@@ -113,7 +113,7 @@ The overhead is thus:
 1. Break the input message into blocks so that no block contains
    more than N - 1 characters, where N is the size of the target
    alphabet.
-   Process every block seprately as specified below.
+   Process every block separately as specified below.
 
 2. Map every takeout character to a character of the target
    alphabet that is not used in the block and is not a takeout
