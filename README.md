@@ -39,6 +39,15 @@ Efficient binary encoding for large alphabets.
 (*) On uniform distribution of input octets.
 
 
+### Building and testing
+
+```shell
+$ git clone git@github.com:kosarev/escapeless.git
+$ make
+$ make test
+```
+
+
 ### Basic idea
 
 Given a source alphabet of size S and a target alphabet of size
