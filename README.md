@@ -1,6 +1,8 @@
 # escapeless
 Efficient binary encoding for large alphabets.
 
+[![Build Status](https://travis-ci.org/kosarev/escapeless.svg?branch=master)](https://travis-ci.org/kosarev/escapeless)
+
 ### Features
 
 * Low fixed-size overhead.
