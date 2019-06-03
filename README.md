@@ -22,7 +22,7 @@ Efficient binary encoding for large alphabets.
 | escapeless251    | 251           |     2.0% |
 | escapeless250    | 250           |     2.4% |
 | escapeless240    | 240           |     6.7% |
-| escapeless230    | 230           |    11.3% |
+| escapeless230    | 230           |    11.4% |
 | escapeless225    | 225           |    13.8% |
 | [Base122](http://blog.kevinalbs.com/base122)            | 122 | 14.3% |
 | [baseE91](http://base91.sourceforge.net/)               |  91 | 22%*, 14-23% |
