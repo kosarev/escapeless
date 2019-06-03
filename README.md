@@ -128,8 +128,7 @@ The overhead is thus:
 
 ### Decoding algorithm
 
-1. Read the map translating takeouts to characters of the target
-   alphabet and the encoded block.
+1. Read the takeouts map and the encoded block.
 
 3. Using the map, restore the takeouts in the block.
 
