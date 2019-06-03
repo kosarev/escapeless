@@ -106,3 +106,21 @@ The overhead is thus:
             (S - 1 - N + 1) / (N - 1) =
             (S - N) / (N - 1)
 ```
+
+
+### Encoding algorithm
+
+1. Break the input message into blocks so that no block contains
+   more than N - 1 characters, where N is the size of the target
+   alphabet.
+   Process every block seprately as specified below.
+
+2. Map every takeout character to a character of the target
+   alphabet that is not used in the block and is not a takeout
+   character.
+   All takeouts not used in the block shall map to the same
+   character.
+
+3. Replace takeout characters of the block using that map.
+
+4. Output the map followed by the rewritten block.
