@@ -124,3 +124,13 @@ The overhead is thus:
 3. Replace takeout characters of the block using that map.
 
 4. Output the map followed by the rewritten block.
+
+
+### Decoding algorithm
+
+1. Read the map translating takeouts to characters of the target
+   alphabet and the encoded block.
+
+3. Using the map, restore the takeouts in the block.
+
+3. Output decoded block.
