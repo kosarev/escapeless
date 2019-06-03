@@ -74,14 +74,17 @@ void escapeless_decode(const unsigned char *takeouts_map,
     unsigned char map[0x100];
     unsigned i, k;
 
-    /* TODO: asserts? */
+    assert(takeouts_size < 0x100 - 1);
+    assert(block_size <= 0x100 - 1 - takeouts_size);
 
     for(i = 0; i != 0x100; ++i)
         map[i] = (unsigned char) i;
 
+    /* Map takeouts to their original values. */
     for(k = 0; k != takeouts_size; ++k)
         map[ takeouts_map[k] ] = takeouts[k];
 
+    /* Restore takeouts in the block. */
     for(i = 0; i != block_size; ++i)
         block[i] = map[ block[i] ];
 }
