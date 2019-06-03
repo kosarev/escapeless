@@ -41,8 +41,8 @@ Efficient binary encoding for large alphabets.
 
 ### Basic idea
 
-Given a source alphabet of size S and a target alphabet of size N
-< S, break the sequence of input characters into blocks so that
+Given a source alphabet of size S and a target alphabet of size
+N < S, break the sequence of input characters into blocks so that
 the number of characters in each block does not exceed N − 1.
 
 Since a block can contain at most N − 1 different characters and
@@ -87,3 +87,22 @@ To let a decoder know the mapping, we also have to prepend each
 of the encoded blocks with a series of characters the takeouts
 are mapped to and assume that the decoder will be given the same
 set of takeout characters specified in the same order.
+
+
+### Overhead formula
+
+For a source alphabet of size S, a target alphabet of size N and
+a block of N − 1 characters, the size of the encoded block is:
+```
+ encoded_block_size = takeouts_map_size + block_size =
+                      (S − N) + (N - 1) =
+                      S - 1
+```
+
+The overhead is thus:
+```
+ overhead = (encoded_block_size - block_size) / block_size =
+            ((S - 1) - (N - 1)) / (N - 1) =
+            (S - 1 - N + 1) / (N - 1) =
+            (S - N) / (N - 1)
+```
