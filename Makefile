@@ -10,7 +10,7 @@ SRC = \
     escapeless.c
 
 escapeless: $(SRC) $(HEADERS)
-	cc -g -O2 -o escapeless $(SRC)
+	cc -std=c90 -W -Wall -Werror -pedantic -g -O2 -o escapeless $(SRC)
 
 test_moby:
 	./escapeless encode aef <tests/moby.txt | diff - tests/moby.txt.encoded
