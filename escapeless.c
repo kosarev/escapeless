@@ -57,11 +57,11 @@ static void encode(const unsigned char *takeouts, unsigned takeouts_size) {
                           block, block_size);
 
         /* Write the substitutes for the takeout bytes. */
-        for(i = 0; i != takeouts_size; ++i)
+        for(i = 0; i < takeouts_size; i++)
             write_byte(takeouts_map[i]);
 
         /* Write the block with replaced takeout bytes. */
-        for(i = 0; i != block_size; ++i)
+        for(i = 0; i < block_size; i++)
             write_byte(block[i]);
     }
 }
