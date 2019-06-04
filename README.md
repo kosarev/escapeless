@@ -29,6 +29,7 @@ Efficient binary encoding for large alphabets.
 | escapeless225    | 225           |    13.8% |
 | [Base122](http://blog.kevinalbs.com/base122)            | 122 | 14.3% |
 | [baseE91](http://base91.sourceforge.net/)               |  91 | 22%*, 14-23% |
+| [Base94](https://gist.github.com/iso2022jp/4054241)     |  94 | 22.2% |
 | [Ascii85](https://en.wikipedia.org/wiki/Ascii85)        |  85 | 25.0% |
 | [Z85](https://rfc.zeromq.org/spec:32/Z85/)              |  85 | 25.0% |
 | [Base64](https://en.wikipedia.org/wiki/Base16)          |  64 | 33.3% |
