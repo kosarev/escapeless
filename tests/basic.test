@@ -1,0 +1,11 @@
+
+# A common-looking block with multiple bytes repeated in it.
+
+# Input block.
+20..50 30..60 40..70 50..80 60..70
+
+# Takeouts.
+38 48 58
+
+# Encoded block.
+00 01 02 20..37 00 39..47 01 49..50 30..37 00 39..47 01 49..57 02 59..60 40..47 01 49..57 02 59..70 50..57 02 59..80 60..70
