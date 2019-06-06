@@ -2,27 +2,30 @@ all: escapeless
 
 test: test_moby test_all_bytes test_one_missed
 
-HEADERS = \
-    escapeless.h
+LIB_HEADER = escapeless.h
+LIB_SRC = escapeless.c
 
-SRC = \
-    escapeless.c \
-    escapeless_cli.c
+TESTER_SRC = tester.c
+CLI_SRC = cli.c
 
 TESTS = ../tests
 
-escapeless: $(SRC) $(HEADERS)
-	cc -std=c90 -W -Wall -Werror -pedantic -g -O2 -o escapeless $(SRC)
+CC_OPTS = -std=c90 -W -Wall -Werror -pedantic -g -O2
 
-test_moby:
+escapeless: $(CLI_SRC) $(LIB_SRC) $(LIB_HEADER)
+	cc $(CC_OPTS) -o escapeless $(CLI_SRC) $(LIB_SRC)
+
+tester: $(TESTER_SRC) $(LIB_SRC) $(LIB_HEADER)
+	cc $(CC_OPTS) -o tester $(TESTER_SRC) $(LIB_SRC)
+
+test_moby: tester
 	./escapeless encode aef <$(TESTS)/moby.txt | diff - $(TESTS)/moby.txt.encoded
 	./escapeless decode aef <$(TESTS)/moby.txt.encoded | diff - $(TESTS)/moby.txt
 
-test_all_bytes:
-	./escapeless encode B <$(TESTS)/all_bytes.bin | diff - $(TESTS)/all_bytes.bin.encoded
-	./escapeless decode B <$(TESTS)/all_bytes.bin.encoded | diff - $(TESTS)/all_bytes.bin
+test_all_bytes: tester
+	./tester <$(TESTS)/all_bytes.test
 
-test_one_missed:
+test_one_missed: tester
 	./escapeless encode AB <$(TESTS)/one_missed.bin | diff - $(TESTS)/one_missed.bin.encoded
 	./escapeless decode AB <$(TESTS)/one_missed.bin.encoded | diff - $(TESTS)/one_missed.bin
 

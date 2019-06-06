@@ -1,0 +1,11 @@
+
+# A block that uses as much bytes as it can; with a used takeout.
+
+# Input block.
+00..fd
+
+# Takeouts.
+42
+
+# Encoded block.
+fe 00..41 fe 43..fd
