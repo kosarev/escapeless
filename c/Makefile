@@ -3,11 +3,11 @@ all: escapeless
 test: test_moby test_all_bytes test_one_missed
 
 HEADERS = \
-    libescapeless.h
+    escapeless.h
 
 SRC = \
-    libescapeless.c \
-    escapeless.c
+    escapeless.c \
+    escapeless_cli.c
 
 TESTS = ../tests
 
