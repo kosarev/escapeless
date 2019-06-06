@@ -47,6 +47,7 @@ Efficient binary encoding for large alphabets.
 
 ```shell
 $ git clone git@github.com:kosarev/escapeless.git
+$ cd c
 $ make
 $ make test
 ```
