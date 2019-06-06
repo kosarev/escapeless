@@ -17,10 +17,10 @@ tester: $(TESTER_SRC) $(LIB_SRC) $(LIB_HEADER)
 	cc $(CC_OPTS) -o tester $(TESTER_SRC) $(LIB_SRC)
 
 test: tester
-	./escapeless decode AB <$(TESTS)/one_missed.bin.encoded | diff - $(TESTS)/one_missed.bin
-	./escapeless encode AB <$(TESTS)/one_missed.bin | diff - $(TESTS)/one_missed.bin.encoded
 	./tester <$(TESTS)/all_bytes.test
 	./tester <$(TESTS)/basic.test
+	./tester <$(TESTS)/one_missed.test
+	./tester <$(TESTS)/one_missed_reversed.test
 	./tester <$(TESTS)/other_unused_takeout.test
 	./tester <$(TESTS)/unused_takeout.test
 

@@ -1,0 +1,11 @@
+
+# A block with one byte value missed.
+
+# Input block.
+00..41 41 43..fc
+
+# Takeouts.
+41 42
+
+# Encoded block.
+fd fe 00..40 fd fd 43..fc

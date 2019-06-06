@@ -1,0 +1,12 @@
+
+# A block with one byte value missed.
+# The takeouts are in the reversed order now.
+
+# Input block.
+00..41 41 43..fc
+
+# Takeouts.
+42 41
+
+# Encoded block.
+fe fd 00..40 fd fd 43..fc
