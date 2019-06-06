@@ -1,4 +1,13 @@
 
+/*  Efficient binary encoding for large alphabets.
+    https://github.com/kosarev/escapeless
+
+    Copyright (C) 2019 Ivan Kosarev.
+    ivan@kosarev.info
+
+    Published under the MIT license.
+*/
+
 #include <assert.h>
 
 #include "libescapeless.h"
