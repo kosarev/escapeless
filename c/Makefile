@@ -1,6 +1,11 @@
 all: escapeless
 
-test: test_moby test_all_bytes test_one_missed
+test: \
+    test_all_bytes \
+    test_moby \
+    test_one_missed \
+    test_other_unused_takeout \
+    test_unused_takeout
 
 LIB_HEADER = escapeless.h
 LIB_SRC = escapeless.c
@@ -24,6 +29,12 @@ test_moby: tester
 
 test_all_bytes: tester
 	./tester <$(TESTS)/all_bytes.test
+
+test_unused_takeout: tester
+	./tester <$(TESTS)/unused_takeout.test
+
+test_other_unused_takeout: tester
+	./tester <$(TESTS)/other_unused_takeout.test
 
 test_one_missed: tester
 	./escapeless encode AB <$(TESTS)/one_missed.bin | diff - $(TESTS)/one_missed.bin.encoded

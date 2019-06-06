@@ -1,0 +1,13 @@
+
+# A block that uses as much bytes as it can; with an unused
+# takeout, but this time pick the other one.
+
+# Input block.
+00..fd
+
+# Takeouts.
+ff
+
+# Encoded block. The takeout has to be mapped to an unused, which
+# is now 0xfe.
+fe 00..fd
