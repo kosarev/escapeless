@@ -32,7 +32,7 @@ Efficient binary encoding for large alphabets.
 | [Base94](https://gist.github.com/iso2022jp/4054241)     |  94 | 22.2% |
 | [Ascii85](https://en.wikipedia.org/wiki/Ascii85)        |  85 | 25.0% |
 | [Z85](https://rfc.zeromq.org/spec:32/Z85/)              |  85 | 25.0% |
-| [Base64](https://en.wikipedia.org/wiki/Base16)          |  64 | 33.3% |
+| [Base64](https://en.wikipedia.org/wiki/Base64)          |  64 | 33.3% |
 | [uuencode](https://en.wikipedia.org/wiki/Uuencoding)    |  64 | 33.3% |
 | [Base58](https://en.wikipedia.org/wiki/Base58)          |  58 | 36.6% |
 | [Base36 / 64-bit](https://en.wikipedia.org/wiki/Base36) |  36 | 59.2%*, 0-62.5% |
