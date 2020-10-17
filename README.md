@@ -147,3 +147,10 @@ The overhead is thus:
 3. Using the map, restore the takeouts in the block.
 
 3. Output decoded block.
+
+
+### The idea explained in greater detail
+
+[Escapeless, Restartable, Binary Encoding](http://chilliant.blogspot.com/2020/01/escapeless-restartable-binary-encoding.html)
+
+Thanks, Ian!
